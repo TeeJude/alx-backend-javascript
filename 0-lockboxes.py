@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-   A function that determines if all boxes 
-   can be opened.
+"""Defines a function that determines if a box containing a list
+   of lists can be opened using keys stored in the lists
 """
 
 
