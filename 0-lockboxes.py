@@ -5,17 +5,22 @@
 
 
 def canUnlockAll(boxes):
-    """Determines if boxes can be unlocked"""
-    position = 0
-    unlocked = {}
-
-    for box in boxes:
-        if len(box) == 0 or position == 0:
-            unlocked[position] = "always_unlocked"
-        for key in box:
-            if key < len(boxes) and key != position:
-                unlocked[key] = key
-        if len(unlocked) == len(boxes):
-            return True
-        position += 1
+    """
+    Description:
+    Write a method that determines if all the boxes can be opened
+    Arguments:
+    boxes --> List of Lists, it contains the boxes with keys
+    Reurn boolean
+    Variables:
+    myKeys --> List, Store the number keys to open boxes
+    key --> integer, key of the myKeys
+    boxKey --> iinteger, key inside of an specific box
+    """
+    myKeys = [0]
+    for key in myKeys:
+        for boxKey in boxes[key]:
+            if boxKey not in myKeys and boxKey < len(boxes):
+                myKeys.append(boxKey)
+    if len(myKeys) == len(boxes):
+        return True
     return False
