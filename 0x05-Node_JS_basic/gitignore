@@ -1,0 +1,6 @@
+gitignore
+node_modules
+package-lock.json
+babel.config.js
+database.csv
+package.json
